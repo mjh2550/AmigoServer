@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.amigo.mapper.BoardMapper">
+
+    <!--공지사항 전체 글 조회 (첫 로드 시)-->
+  <!--  <select id="getBoardList"
+            resultType="com.spring.amigo.model.BoardVO">
+
+        SELECT idx
+             , title
+             , readcount
+             , insertuser
+             , insertdate
+             , noticeFlag
+        FROM dbo.daea_notice
+        where 1=1 ;
+
+    </select>
+
+    <select id="getListCount"
+            resultType="java.lang.String">
+        SELECT Count(*)
+        FROM dbo.daea_notice;
+    </select>
+
+    <select id="getBoardListWithPaging"
+            parameterType="java.util.HashMap"
+            resultType="com.spring.amigo.model.BoardVO">
+
+        SELECT *
+        FROM (
+                 SELECT ROW_NUMBER() OVER(ORDER BY idx DESC) AS rownum
+                      , idx
+                      , title
+                      , readcount
+                      , insertuser
+                      , insertdate
+                      , noticeFlag
+                 FROM dbo.daea_notice
+             )a
+        WHERE 1=1
+          AND a.rownum between #{pagination.startIndex} AND #{pagination.endIndex}
+          AND a.title like #{SEARCH_WORD}
+        order by idx asc;
+    </select>-->
+
+</mapper>
