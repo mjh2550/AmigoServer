@@ -2,16 +2,18 @@
 2022.06.08 ~
 
 ## 개발 목적
-더 편리한 안심 등/하교(원) 과
-(부모) 교육기관 간 원할한 소통이 가능하고
-(학생) 편리한 성적 및 오답 분석이 가능한 시스템 개발
-
+- 더 편리한 안심 등/하교(원)과 교육기관 간 원할한 소통이 가능하고 편리한 성적 및 오답 분석이 가능한 시스템 개발
 
 ## 개발 팀원
-*문지홍 , 문호환
+* 문지홍 , 문호환
 
 ## 개발 환경
-*Spring ,Spring-boot,thymeleaf , MyBatis, OracleDB
+* Spring ,Spring-boot,thymeleaf , MyBatis, OracleDB
+
+## 개발화면
+* 카카오 오븐
+https://ovenapp.io/project/8VLloFfY8LWY3XB2WGvSyxI9nuTWraeJ#XJcq9l
+
 
 ## 개발 내용
 
