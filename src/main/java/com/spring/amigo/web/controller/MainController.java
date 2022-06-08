@@ -1,16 +1,13 @@
-package com.spring.amigo.main.controller;
+package com.spring.amigo.web.controller;
 
-import com.spring.amigo.main.service.MainService;
-import com.spring.amigo.model.MainVO;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.spring.amigo.web.service.main.MainService;
+import com.spring.amigo.web.model.MainVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.net.http.HttpRequest;
 import java.util.ArrayList;
 
 @Controller

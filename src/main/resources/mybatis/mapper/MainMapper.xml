@@ -1,9 +1,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.spring.amigo.mapper.MainMapper">
+<mapper namespace="com.spring.amigo.web.mapper.MainMapper">
 
-    <select id="getAllList" resultType="com.spring.amigo.model.MainVO">
+    <select id="getAllList" resultType="com.spring.amigo.web.model.MainVO">
         SELECT * FROM JOBS;
     </select>
 

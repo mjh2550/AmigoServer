@@ -1,6 +1,6 @@
-package com.spring.amigo.mapper;
+package com.spring.amigo.mobile.mapper;
 
-import com.spring.amigo.model.MainVO;
+import com.spring.amigo.web.model.MainVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
