@@ -1,7 +1,7 @@
 package com.spring.amigo.web.service.main;
 
 import com.spring.amigo.web.mapper.MainMapper;
-import com.spring.amigo.web.model.MainVO;
+import com.spring.amigo.model.MainVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

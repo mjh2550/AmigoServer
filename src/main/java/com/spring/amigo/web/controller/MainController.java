@@ -1,7 +1,7 @@
 package com.spring.amigo.web.controller;
 
 import com.spring.amigo.web.service.main.MainService;
-import com.spring.amigo.web.model.MainVO;
+import com.spring.amigo.model.MainVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

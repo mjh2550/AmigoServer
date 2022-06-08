@@ -29,7 +29,9 @@ dependencies {
 	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'javax.servlet:jstl'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 }
 
 tasks.named('test') {

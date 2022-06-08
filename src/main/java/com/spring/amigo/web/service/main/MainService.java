@@ -1,6 +1,6 @@
 package com.spring.amigo.web.service.main;
 
-import com.spring.amigo.web.model.MainVO;
+import com.spring.amigo.model.MainVO;
 
 import java.util.ArrayList;
 

@@ -6,45 +6,47 @@
 <mapper namespace="com.spring.amigo.web.mapper.BoardMapper">
 
     <!--공지사항 전체 글 조회 (첫 로드 시)-->
-  <!--  <select id="getBoardList"
-            resultType="com.spring.amigo.common.model.BoardVO">
+   <select id="getBoardList"
+           resultType="com.spring.amigo.model.BoardVO">
 
-        SELECT idx
-             , title
-             , readcount
-             , insertuser
-             , insertdate
-             , noticeFlag
-        FROM dbo.daea_notice
-        where 1=1 ;
+        SELECT board_idx
+             , board_title
+             , read_count
+             , notice_flag
+             , insert_user
+             , insert_time
+             , insert_ip
+        FROM amigo_board
+        where 1=1
 
     </select>
 
     <select id="getListCount"
             resultType="java.lang.String">
         SELECT Count(*)
-        FROM dbo.daea_notice;
+        FROM amigo_board
     </select>
 
     <select id="getBoardListWithPaging"
             parameterType="java.util.HashMap"
-            resultType="com.spring.amigo.common.model.BoardVO">
+            resultType="com.spring.amigo.model.BoardVO">
 
         SELECT *
         FROM (
-                 SELECT ROW_NUMBER() OVER(ORDER BY idx DESC) AS rownum
-                      , idx
-                      , title
-                      , readcount
-                      , insertuser
-                      , insertdate
-                      , noticeFlag
-                 FROM dbo.daea_notice
-             )a
+                 SELECT ROWNUM
+                      , board_idx
+                      , board_title
+                      , read_count
+                      , notice_flag
+                      , insert_user
+                      , insert_time
+                      , insert_ip
+                 FROM amigo_board
+             ) a
         WHERE 1=1
-          AND a.rownum between #{pagination.startIndex} AND #{pagination.endIndex}
-          AND a.title like #{SEARCH_WORD}
-        order by idx asc;
-    </select>-->
+          AND ROWNUM between #{pagination.startIndex} AND #{pagination.endIndex}
+          AND a.board_title like #{SEARCH_WORD}
+        order by board_idx asc
+    </select>
 
 </mapper>

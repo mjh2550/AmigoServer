@@ -3,7 +3,7 @@
 
 <mapper namespace="com.spring.amigo.web.mapper.MainMapper">
 
-    <select id="getAllList" resultType="com.spring.amigo.web.model.MainVO">
+    <select id="getAllList" resultType="com.spring.amigo.model.MainVO">
         SELECT * FROM JOBS;
     </select>
 
