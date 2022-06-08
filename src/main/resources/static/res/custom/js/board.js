@@ -12,9 +12,6 @@ function goList(pageNum) {
         datatype:"json"
         ,})
         .done(function (data) {
-//            var d = JSON.parse(data)
-            //$("#resultDiv").replaceWith(fragment);
-            //왜 undefined??????????
             // alert("당근빳다죠 시파"+ data.list);
             console.log(data.list);
             let resultList = data.list;
@@ -30,33 +27,20 @@ function goList(pageNum) {
             }else{
                 for(let i=0;i<resultList.length;i++){
 
-                    /*
-                <tr th:each="VO : ${boardList}">
-                    <td th:text="${VO.idx}"></td>
-                    <td th:text="${VO.title}"></td>
-                    <td th:text="${VO.insertUser}"></td>
-                    <td th:text="${VO.readCount}"></td>
-                    <td th:text="${VO.insertDate}"></td>
-                    <td th:text="${VO.noticeFlag}"></td>
-                </tr>
-                     */
-
-                    let idx = resultList[i].boardIdx;
-                    let title = resultList[i].boardTitle;
-                    let insertUser = resultList[i].insertUser;
-                    let readCount = resultList[i].readCount;
-                    let insertTime = resultList[i].insertTime;
-                    let noticeFlag = resultList[i].noticeFlag;
-
+                    let idx = resultList[i].board_idx;
+                    let title = resultList[i].board_title;
+                    let insertUser = resultList[i].insert_user;
+                    let readCount = resultList[i].read_count;
+                    let insertTime = resultList[i].insert_time;
+                    let noticeFlag = resultList[i].notice_flag;
 
                     html+="<tr>"
                         + "<td>" + idx        + "</td>"
                         + "<td>" + title      + "</td>"
                         + "<td>" + insertUser + "</td>"
                         + "<td>" + readCount  + "</td>"
-                        + "<td>" + insertTime  + "</td>"
+                        + "<td>" + insertTime + "</td>"
                         + "<td>" + noticeFlag + "</td>"
-
                         + "</tr>";
 
                 }

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @RequiredArgsConstructor
 @Service
@@ -23,5 +24,15 @@ public class BoardServiceImpl implements BoardService {
     @Override
     public ArrayList<BoardVO> getBoardList() {
         return boardMapper.getBoardList();
+    }
+
+    @Override
+    public String getListCount() {
+        return boardMapper.getListCount();
+    }
+
+    @Override
+    public ArrayList<BoardVO> getBoardListWithPaging(HashMap<String, Object> paramMap) {
+        return boardMapper.getBoardListWithPaging(paramMap);
     }
 }
