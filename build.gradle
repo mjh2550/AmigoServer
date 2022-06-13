@@ -32,6 +32,13 @@ dependencies {
 	implementation 'javax.servlet:jstl'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+
+	//tiles 관련 라이브러리
+	implementation 'org.apache.tiles:tiles-jsp:3.0.8'
+	implementation 'org.apache.tiles:tiles-servlet:3.0.8'
+	implementation 'org.apache.tiles:tiles-core:3.0.8'
+	implementation 'org.apache.tiles:tiles-api:3.0.8'
+	implementation 'org.apache.tiles:tiles-el:3.0.8'
 }
 
 tasks.named('test') {
