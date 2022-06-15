@@ -22,7 +22,7 @@ public class BoardController {
         this.boardService = boardService;
     }
 
-    @GetMapping("board/getBoardList.do")
+    @GetMapping("board")
     public ModelAndView getBoardList(){
         ModelAndView mv = new ModelAndView("board");
         ArrayList<BoardVO> getBoardList = boardService.getBoardList();
@@ -31,9 +31,12 @@ public class BoardController {
     }
 
     /**
+     * 2022-06-08
      * ajax로 게시글 조회
+     * @author 문지홍
      * @param request
      * @return model
+     *
      */
     @ResponseBody
     @PostMapping("goList.do")
