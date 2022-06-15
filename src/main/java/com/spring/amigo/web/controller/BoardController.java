@@ -22,7 +22,7 @@ public class BoardController {
         this.boardService = boardService;
     }
 
-    @GetMapping("board/getBoardList.do")
+    @GetMapping("board")
     public ModelAndView getBoardList(){
         ModelAndView mv = new ModelAndView("board");
         ArrayList<BoardVO> getBoardList = boardService.getBoardList();
