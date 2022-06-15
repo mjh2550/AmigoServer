@@ -8,7 +8,7 @@
 * 문지홍 , 문호환
 
 ## 개발 환경
-* Spring ,Spring-boot,thymeleaf , MyBatis, OracleDB
+* Spring ,Spring-boot,thymeleaf , MyBatis, OracleDB 
 
 ## 개발화면
 * 카카오 오븐
