@@ -32,7 +32,8 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 
 	// JDBC
-	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
+//	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
+	runtimeOnly 'mysql:mysql-connector-java:8.0.25'
 
 	// Thymeleaf
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
