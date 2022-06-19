@@ -33,7 +33,7 @@
 
         SELECT *
         FROM (
-                 SELECT ROWNUM
+                 SELECT row_number() over(order by board_idx asc) ROWNUM
                       , board_idx
                       , board_title
                       , read_count

@@ -1,7 +1,11 @@
 package com.spring.amigo.mobile.service.api;
 
+import com.spring.amigo.mobile.mapper.MobileApiMapper;
 import com.spring.amigo.model.TestVO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.configurationprocessor.json.JSONException;
+import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,14 +14,15 @@ import java.util.ArrayList;
 @Service
 public class MobileApiServiceImpl implements MobileApiService{
 
+    private final MobileApiMapper mobileApiMapper;
+
+//    @Autowired
+//    public MobileApiServiceImpl(MobileApiMapper mobileApiMapper) {
+//        this.mobileApiMapper = mobileApiMapper;
+//    }
+
     @Override
     public ArrayList<TestVO> getAllList() {
-        ArrayList<TestVO> getResultList = new ArrayList<>();
-
-        //TODO Test
-        getResultList.add(new TestVO("1","test"));
-        getResultList.add(new TestVO("2","test2"));
-
-        return getResultList;
+        return mobileApiMapper.getAllList();
     }
 }
