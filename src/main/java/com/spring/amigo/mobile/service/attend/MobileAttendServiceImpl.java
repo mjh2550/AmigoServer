@@ -1,4 +1,4 @@
 package com.spring.amigo.mobile.service.attend;
 
-public interface AttendService {
+public class MobileAttendServiceImpl {
 }
