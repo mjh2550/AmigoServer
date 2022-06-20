@@ -61,7 +61,7 @@ mobile/web 구분
 
 ### BACK_END
 * CODE_PACKAGE : src/main/java/com/spring/amigo
-* DB : oracle
+* DB : mysql
 * 화면
   * app
     - main , board, attend
