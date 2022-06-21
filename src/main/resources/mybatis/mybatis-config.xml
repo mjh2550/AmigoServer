@@ -5,5 +5,6 @@
     <mappers>
         <mapper resource="MainMapper.xml"/>
         <mapper resource="BoardMapper.xml"/>
+        <mapper resource="ApiMapper.xml"/>
     </mappers>
 </configuration>
