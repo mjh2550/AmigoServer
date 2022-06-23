@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter @Setter
 public class BoardVO {
 
-    private String board_idx;
+    private int board_idx;
     private String board_title;
     private String board_contents;
     private String read_count;
