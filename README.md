@@ -8,7 +8,8 @@
 * 문지홍 , 문호환
 
 ## 개발 환경
-* Spring ,Spring-boot,thymeleaf , MyBatis, OracleDB 
+* Spring ,Spring-boot,thymeleaf , MyBatis, MysqlDB
+
 
 ## 개발화면
 * 카카오 오븐
@@ -61,7 +62,7 @@ mobile/web 구분
 
 ### BACK_END
 * CODE_PACKAGE : src/main/java/com/spring/amigo
-* DB : oracle
+* DB : mysql
 * 화면
   * app
     - main , board, attend
