@@ -7,18 +7,15 @@ import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
-import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
 @Configuration
 @EnableWebMvc
-public class SwaggerConfiguration {
+public class SwaggerConfig {
 
     private ApiInfo swaggerInfo() {
         return new ApiInfoBuilder()
@@ -32,8 +29,8 @@ public class SwaggerConfiguration {
                 .consumes(getConsumeContentTypes())
                 .produces(getProduceContentTypes())
                 .apiInfo(swaggerInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("com.spring.amigo.mobile.controller"))
-                .paths(PathSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("com.spring.amigo"))
+                .paths(PathSelectors.ant("/**/api/**"))
                 .build()
                 .useDefaultResponseMessages(false);
     }
