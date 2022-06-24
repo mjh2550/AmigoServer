@@ -1,6 +1,6 @@
 package com.spring.amigo.mobile.controller;
 
-public class MainController {
+public class MobileMainController {
 
 
 }
