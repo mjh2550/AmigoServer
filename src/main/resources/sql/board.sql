@@ -4,7 +4,7 @@
  * 문호환
  */
 CREATE TABLE amigo_board (
-                             board_idx VARCHAR(100) PRIMARY KEY,
+                             board_idx INT(100) AUTO_INCREMENT PRIMARY KEY,
                              board_title VARCHAR(100) NOT NULL,
                              board_contents VARCHAR(3000),
                              read_count INT(10) default 0,
@@ -56,7 +56,7 @@ where 1=1;
 INSERT INTO AMIGO_BOARD
 (BOARD_IDX, BOARD_TITLE, BOARD_CONTENTS, READ_COUNT, NOTICE_FLAG, INSERT_USER, INSERT_TIME, INSERT_IP)
 VALUES
-    ('1', 'test', 'test2', 0 , 'N', 'hohwanm', '20220613', '127.0.0.1');
+    ( null, 'test', 'test3', 0 , 'N', 'jhmoon', '20220613', '127.0.0.1');
 
 /*
  * 2022-06-13
