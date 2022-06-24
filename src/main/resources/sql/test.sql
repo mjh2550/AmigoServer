@@ -6,5 +6,5 @@ CREATE TABLE test_tb (
 INSERT INTO test_tb
             values (
                        null
-                   , 'test1'
+                   , 'test2'
                    );

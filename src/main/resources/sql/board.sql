@@ -56,7 +56,7 @@ where 1=1;
 INSERT INTO AMIGO_BOARD
 (BOARD_IDX, BOARD_TITLE, BOARD_CONTENTS, READ_COUNT, NOTICE_FLAG, INSERT_USER, INSERT_TIME, INSERT_IP)
 VALUES
-    ( null, 'test', 'test2', 0 , 'N', 'hohwanm', '20220613', '127.0.0.1');
+    ( null, 'test', 'test3', 0 , 'N', 'jhmoon', '20220613', '127.0.0.1');
 
 /*
  * 2022-06-13
