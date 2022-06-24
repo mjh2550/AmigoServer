@@ -47,6 +47,10 @@ dependencies {
 
 	// Tomcat
 	implementation 'org.apache.tomcat:tomcat-jsp-api:10.0.22'
+
+	// swagger
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	implementation 'io.springfox:springfox-swagger-ui:3.0.0'
 }
 
 tasks.named('test') {
