@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 
-@ApiOperation("api test")
 @RestController
 public class MobileApiController {
 
