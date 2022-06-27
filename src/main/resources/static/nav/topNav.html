@@ -4,9 +4,20 @@
 <!--top nav-->
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="http://localhost:8080">
-	AmigoServer
-            </a>
+            <h1 class="logo">
+                <img src="../img/Amigo.png">
+            </h1>
+
+            <!---User Info--->
+            <div class="login-info">
+                <div class="user-img"></div>
+                <p class="user-name">문호환</p>
+                <p class="user-detail">
+                    <span class="id">문호환</span> <span class="bar">/</span>
+                    <span class="position">기업부설 연구소</span>
+                </p>
+                <a href="/logout" class="logout" onclick="logout()">Logout</a>
+            </div>
         </div>
     </nav>
 
