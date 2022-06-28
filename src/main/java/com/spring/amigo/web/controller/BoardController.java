@@ -3,6 +3,10 @@ package com.spring.amigo.web.controller;
 import com.spring.amigo.model.Pagination;
 import com.spring.amigo.web.service.board.BoardService;
 import com.spring.amigo.model.BoardVO;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +26,11 @@ public class BoardController {
         this.boardService = boardService;
     }
 
+    @ApiOperation(value="boardList", notes="전체 게시물 받아오기")
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "API 정상 작동"),
+            @ApiResponse(code = 500, message = "서버 에러")
+    })
     @GetMapping("board")
     public ModelAndView getBoardList(){
         ModelAndView mv = new ModelAndView("board");
@@ -38,6 +47,12 @@ public class BoardController {
      * @return model
      *
      */
+
+    @ApiOperation(value="value", notes="게시물 검색, 페이징처리")
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "API 정상 작동"),
+            @ApiResponse(code = 500, message = "서버 에러")
+    })
     @ResponseBody
     @PostMapping("goList.do")
     public ModelAndView goList(HttpServletRequest request){

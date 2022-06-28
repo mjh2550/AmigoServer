@@ -5,9 +5,11 @@
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
   <!--  //기본적인 html head 추가부-->
-   <!-- <th:block layout:fragment="top_nav"></th:block>-->
-    <!--<th:block th:replace="nav/topNav :: top_nav" />-->
+    <th:block layout:fragment="top_nav"></th:block>
+    <th:block th:replace="nav/topNav :: top_nav" />
 
+    <th:block layout:fragment="side_nav"></th:block>
+    <th:block th:replace="nav/sideNav :: side_nav" />
    <!-- <link rel="stylesheet" th:href="@{/res/bootstrap/bootstrap-3.3.2-dist/css/bootstrap.css}">
     <link rel="stylesheet" th:href="@{/res/bootstrap/bootstrap-3.3.2-dist/css/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{/res/bootstrap/bootstrap-3.3.2-dist/css/bootstrap-theme.css}">

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        var level1 = $('.lnb-menu > li');
+        var level2 = $('.lnb-sub > li');
+
+        $(level1).click(function (e) {
+            e.stopPropagation();
+            if($('.expanded').length > 1){
+                e.preventDefault();
+                $(level1).not($(this)).removeClass('expanded');
+                $(level2).not($(this).children()).removeClass('expanded');
+                $('.lnb-sub').not($(this).children()).slideUp(500);
+            }
+        });
+
+        $(level2).click(function (e) {
+            e.stopPropagation();
+            if($('.expanded').length > 2){
+                e.preventDefault();
+                $(level2).not($(this)).removeClass('expanded');
+                $('.lnb-sub > li.expandable > ul').not($(this).children()).slideUp(500);
+            }
+        });
+
+        var current = window.location.pathname;
+
+        var target = $("a[href='"+current+"']").parent($('li')).parent();  //ul
+        var targetParent = target.parent($('.lnb-sub ')).parent();
+        target.parent($('.lnb-sub > li.expandable')).addClass('expanded');
+        if(targetParent){
+            targetParent.removeAttr("style");
+        }
+        if(target)
+            target.attr('style', 'display: block');
+
+        if(level2.hasClass('expandable expanded')){
+            targetParent.parent($('.lnb-menu > li.expandable')).addClass('expanded');
+            $('li.expandable expanded > ul').show();
+        }
+        $("a[href='"+current+"']").parent('li').attr('class', 'selected');
+
+    });
+
+    function logout(){
+        sessionStorage.removeItem('url');
+    }
+</script>
+
+
+<!--- 펼고 접기 버튼--->
+<div class="lnb-close">
+    <a class="menu-trigger active " href="#">접기 <span></span> <span></span>
+        <span></span>
+    </a>
+</div>
+<!--- //펼고 접기 버튼--->
+
+<!---left menu--->
+<style>
+.lnb-area {
+    width: 220px;
+    position:absolute;
+    left:0;
+    top:0;
+    background: #fff;
+}
+</style>
+<div th:fragment="side_nav">
+<!--<div class="left-nav-wrap">-->
+    <!--- Expand Menu--->
+        <div class="lnb-area">
+            <ul class="lnb-menu">
+                <li>
+                    <a href="#">메뉴1</a>
+                    <ul class="lnb-sub">
+                        <li>
+                            <a href="#">메뉴2</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--- //Expand Menu--->
+    <!--- Down size Menu--->
+    <div class="lnb-hortcut-wrap" style="display: none">
+        <ul class="short-menu">
+            <li class="home"><a href="#"></a></li>
+            <li class="report"><a href="#"></a></li>
+            <li class="developer"><a href="#"></a></li>
+            <li class="scheduler"><a href="#"></a></li>
+            <li class="security"><a href="#"></a></li>
+            <li class="api"><a href="#"></a></li>
+            <li class="config"><a href="#"></a></li>
+        </ul>
+    </div>
+    <!---//Down size Men--->
+</div>
+<!---//left menu--->
