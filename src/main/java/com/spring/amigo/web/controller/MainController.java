@@ -26,6 +26,13 @@ public class MainController {
         return mv;
     }
 
+    @GetMapping("index")
+    public ModelAndView index(){
+        ModelAndView mv = new ModelAndView("index");     //View page Name
+        mv.addObject("param","param1");     // param Name
+        return mv;
+    }
+
     @PostMapping("getAll.do")
     public ModelAndView getAll(HttpServletRequest httpServletRequest){
         ModelAndView mv = new ModelAndView("JsonView");
